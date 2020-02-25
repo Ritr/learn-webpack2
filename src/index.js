@@ -1,6 +1,15 @@
+import Input from './input.js';
+import Div from './div.js';
+var input = Input();
+var div = Div();
+document.body.appendChild(input);
+document.body.appendChild(div);
 
-const arr = [1, 2, 3, 4, 5];
-arr.map(item => {
-    console.log(item);
-});
-document.write('表哥表弟一家亲');
+console.log(module.hot);
+if (module.hot) {
+    module.hot.accept('./div.js', function () {
+        console.log('div模块热更新');
+        document.body.removeChild(div);
+        document.body.appendChild(Div());
+    });
+}
