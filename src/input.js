@@ -1,5 +1,5 @@
-function input() {
+function Input() {
     var input = document.createElement('input');
     return input;
 }
-export default input;
+export default Input;

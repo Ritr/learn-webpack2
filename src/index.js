@@ -5,6 +5,10 @@ var div = Div();
 document.body.appendChild(input);
 document.body.appendChild(div);
 
+//错误代码
+var id = document.getElementById('id');
+console.log(id.innerHTML);
+
 console.log(module.hot);
 if (module.hot) {
     module.hot.accept('./div.js', function () {

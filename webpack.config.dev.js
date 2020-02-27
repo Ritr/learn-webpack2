@@ -9,6 +9,7 @@ module.exports = merge(common, {
         port: 9000,
         hot: false
     },
+    devtool: 'eval',
     plugins:[
         new webpack.HotModuleReplacementPlugin()
     ]
