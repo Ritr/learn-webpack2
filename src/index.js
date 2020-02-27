@@ -1,4 +1,5 @@
 
+import './style.css';
 var button = document.createElement('button');
 button.innerText = '加载DIV模块'
 button.onclick = getDiv;
