@@ -6,6 +6,7 @@ module.exports = {
     entry: './src/index.js',
     output: {
         filename: 'main.[hash].js',
+        chunkFilename:'[name].bundle.js',
         path: path.resolve(__dirname, 'dist')
     },
     mode: "development",
@@ -17,7 +18,11 @@ module.exports = {
                 use: {
                     loader: 'babel-loader',
                     options: {
-                        presets: ['@babel/preset-env']
+                        presets: ['@babel/preset-env'],
+                        plugins: [
+                            '@babel/plugin-transform-runtime',
+                            '@babel/plugin-syntax-dynamic-import'
+                        ]
                     }
                 }
             },
