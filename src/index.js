@@ -1,5 +1,6 @@
 import Input from './input.js';
 import Div from './div.js';
+import './style.css';
 var input = Input();
 var div = Div();
 document.body.appendChild(input);
